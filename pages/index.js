@@ -25,11 +25,11 @@ export default function Home() {
     <br/>
         <div className={styles.grid} style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
           <h1>{count}</h1>
-          <button onClick={() => dispatch(increment())}>Increase</button>
+          <button onClick={() => dispatch(increment(2))}>Increase</button>
           <button 
             onClick={() => 
-              {if(count === 0) return
-              else dispatch(decrement())}
+              {if(count <= 0) return
+              else dispatch(decrement(5))}
           }>Decrease</button>
         </div>
       </main>
